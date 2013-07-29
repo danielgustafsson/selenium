@@ -317,7 +317,9 @@ public class LauncherUtils {
 
     // Disable cache
     out.println("user_pref('browser.cache.disk.enable', false);");
-    out.println("user_pref('browser.cache.memory.enable', true);");
+    out.println("user_pref('browser.cache.memory.enable', false);");
+    out.println("user_pref('network.http.use-cache', false);");
+    out.println("user_pref('browser.cache.check_doc_frequency', 1);");
 
     //Allow extensions to be installed into the profile and still work
     out.println("user_pref('extensions.autoDisableScopes', 10);");
